@@ -1,10 +1,10 @@
-Movie Rating Prediction Project
+# Movie Rating Prediction Project
 
 This project predicts the rating of Indian movies using machine learning models such as Decision Tree Regressor, Support Vector Regressor (SVR), and Gradient Boosting Regressor. It analyzes IMDb Indian movie data to extract insights and predict movie ratings based on multiple features.
 
-📊 Project Features
+## 📊 Project Features
 
-Data Exploration & Visualization:
+_Data Exploration & Visualization:_
 
 Identify the year with the best average rating.
 
@@ -14,13 +14,13 @@ Visualize the relationship between movie duration and ratings.
 
 Explore correlations between features using a heatmap and pair plots.
 
-Feature Engineering:
+## Feature Engineering:
 
 Derived features: Genre Average Rating, Director Average Rating, and Actor Average Ratings.
 
 Director's success rate based on the average rating of their movies.
 
-Machine Learning Models:
+_Machine Learning Models:_
 
 Decision Tree Regressor
 
@@ -28,7 +28,7 @@ Support Vector Regressor (SVR)
 
 Gradient Boosting Regressor
 
-Model Evaluation:
+_Model Evaluation:_
 
 Mean Squared Error (MSE)
 
@@ -36,52 +36,64 @@ Mean Absolute Error (MAE)
 
 R² Score
 
-Prediction:
+_Prediction:_
 
 Make predictions on sample movie data.
 
 Compare model performances using scatter plots.
 
-📁 Dataset
+## 📁 Dataset
 
 Ensure the dataset is downloaded from Kaggle and stored in Google Drive.
 
-Download the dataset using kagglehub:
+_Download the dataset using kagglehub:_
 
+'''bash
 import kagglehub
 path = kagglehub.dataset_download("adrianmcmahon/imdb-india-movies")
 print("Dataset Path:", path)
+'''
 
 Move the dataset to your Google Drive:
 
+'''bash
 from google.colab import drive
 import shutil
 
 drive.mount('/content/drive')
 shutil.move(path, '/content/drive/MyDrive/IMDb_Movies_India.csv')
+'''
 
-🛠️ Setup Instructions
+## 🛠️ Setup Instructions
 
-Clone this repository or download the script:
+_Clone this repository or download the script:_
 
+'''bash
 git clone <repository_url>
 cd movie-rating-prediction
+'''
 
 Install required libraries:
 
+'''bash
 pip install pandas numpy seaborn matplotlib scikit-learn tensorflow keras
+'''
 
-Ensure the dataset is available at the correct path:
+_Ensure the dataset is available at the correct path:_
 
-Modify this line if needed:
+_Modify this line if needed:_
 
+'''bash
 df = pd.read_csv('/content/drive/MyDrive/IMDb Movies India.csv', encoding='ISO-8859-1')
+'''
 
-Run the script:
+_Run the script:_
 
+'''bash
 python movie_rating_prediction.py
+'''
 
-📈 Outputs
+## 📈 Outputs
 
 Year with the best average rating.
 
@@ -93,13 +105,13 @@ Performance of Decision Tree, SVR, and Gradient Boosting models.
 
 Predicted rating for trial data.
 
-Sample Prediction Output:
+_Sample Prediction Output:_
 
-Predicted Rating for trial data: 8.93
+Predicted Rating for trial data: 8.32
 
-📊 Model Performance Comparison
+## 📊 Model Performance Comparison
 
-The script evaluates three models and provides metrics:
+_The script evaluates three models and provides metrics:_
 
 Mean Squared Error (MSE)
 
@@ -107,7 +119,7 @@ Mean Absolute Error (MAE)
 
 R² Score
 
-🧹 Data Cleaning
+## 🧹 Data Cleaning
 
 Handles missing and duplicate values.
 
@@ -115,7 +127,7 @@ Converts data types for compatibility.
 
 Adds derived features for better prediction.
 
-📌 Notes
+## 📌 Notes
 
 Ensure you have Python 3.8+ installed.
 
