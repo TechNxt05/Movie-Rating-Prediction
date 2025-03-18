@@ -48,50 +48,50 @@ Ensure the dataset is downloaded from Kaggle and stored in Google Drive.
 
 * _Download the dataset using kagglehub:_
 
-'''bash
+```
 import kagglehub
 path = kagglehub.dataset_download("adrianmcmahon/imdb-india-movies")
 print("Dataset Path:", path)
-'''
+```
 
 * _Move the dataset to your Google Drive:_
 
-'''bash
+```
 from google.colab import drive
 import shutil
 
 drive.mount('/content/drive')
 shutil.move(path, '/content/drive/MyDrive/IMDb_Movies_India.csv')
-'''
+```
 
 ## 🛠️ Setup Instructions
 
 * _Clone this repository or download the script:_
 
-'''bash
+```
 git clone <repository_url>
 cd movie-rating-prediction
-'''
+```
 
 * _Install required libraries:_
 
-'''bash
+```
 pip install pandas numpy seaborn matplotlib scikit-learn tensorflow keras
-'''
+```
 
 * _Ensure the dataset is available at the correct path:_
 
 _Modify this line if needed:_
 
-'''bash
+```
 df = pd.read_csv('/content/drive/MyDrive/IMDb Movies India.csv', encoding='ISO-8859-1')
-'''
+```
 
 _Run the script:_
 
-'''bash
+```
 python movie_rating_prediction.py
-'''
+```
 
 ## 📈 Outputs
 
@@ -107,9 +107,9 @@ python movie_rating_prediction.py
 
 _Sample Prediction Output:_
 
-'''bash
+```
 Predicted Rating for trial data: 8.32
-'''
+```
 
 ## 📊 Model Performance Comparison
 
